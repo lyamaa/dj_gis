@@ -7,9 +7,10 @@ authors = ["surajmt8848 <suraj8848mt@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 Django = "^3.2.4"
-djangorestframework = "^3.12.4"
+djangorestframework = "3.12.4"
 black = "^21.5b2"
 isort = "^5.8.0"
+django-leaflet = "^0.28.0"
 
 [tool.poetry.dev-dependencies]
 
