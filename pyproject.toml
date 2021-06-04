@@ -11,6 +11,7 @@ djangorestframework = "3.12.4"
 black = "^21.5b2"
 isort = "^5.8.0"
 django-leaflet = "^0.28.0"
+geopy = "^2.1.0"
 
 [tool.poetry.dev-dependencies]
 

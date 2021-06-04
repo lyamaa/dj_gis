@@ -1,11 +1,11 @@
 from re import I
 from django.urls import path
-from .views import HotelViewSet
+from .views import HotelUpdateRetreiveView, ListCreateGenericViews
 
 urlpatterns = [
-    path("hotels", HotelViewSet.as_view({"get": "list", "post": "create"})),
+    path("hotels", ListCreateGenericViews.as_view()),
     path(
         "hotels/<str:pk>",
-        HotelViewSet.as_view({"get": "retrieve", "put": "update", "delete": "destroy"}),
+        HotelUpdateRetreiveView.as_view(),
     ),
 ]
