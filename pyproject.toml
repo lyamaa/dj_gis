@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "dj_postgis"
+version = "0.1.0"
+description = ""
+authors = ["surajmt8848 <suraj8848mt@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^3.2.4"
+djangorestframework = "^3.12.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
