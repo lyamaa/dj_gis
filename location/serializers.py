@@ -7,3 +7,5 @@ class HotelSerializer(serializers.ModelSerializer):
         model = Hotel
 
         fields = ("id", "name", "address", "location")
+
+        extra_kwargs = {"location": {"read_only": True}}
