@@ -71,9 +71,9 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "NAME": "locator",
-        "USER": "locator",
-        "PASSWORD": "locator",
+        "NAME": "geodjango",
+        "USER": "geodjango",
+        "PASSWORD": "geodjango",
         "HOST": "localhost",
         "PORT": "5432",
     }
