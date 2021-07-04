@@ -14,8 +14,14 @@ class ListCreateGenericViews(generics.ListCreateAPIView):
     serializer_class = HotelSerializer
 
     def perform_create(self, serializer):
-        address = serializer.initial_data["address"]
-        g = geolocator.geocode(address)
+        street_1 = serializer.initial_data["street_1"]
+        address = serializer.initial_data["city"]
+        state = serializer.initial_data["state"]
+        country = serializer.initial_data["city"]
+        data = [street_1, address, state, country]
+        " ".join(data)
+
+        g = geolocator.geocode(data)
         lat = g.latitude
         lng = g.longitude
         pnt = Point(lng, lat)
@@ -28,8 +34,14 @@ class HotelUpdateRetreiveView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = HotelSerializer
 
     def perform_update(self, serializer):
-        address = serializer.initial_data["address"]
-        g = geolocator.geocode(address)
+        street_1 = serializer.initial_data["street_1"]
+        address = serializer.initial_data["city"]
+        state = serializer.initial_data["state"]
+        country = serializer.initial_data["city"]
+        data = [street_1, address, state, country]
+        " ".join(data)
+
+        g = geolocator.geocode(data)
         lat = g.latitude
         lng = g.longitude
         pnt = Point(lng, lat)
